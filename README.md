@@ -14,6 +14,3 @@ It allows you to create, manage, and save your tasks directly in your browser us
 - Clear all tasks with one click  
 - Tasks are saved in `localStorage` so they persist even after refreshing or closing the page  
 
----
-
-## 📂 Project Structure
