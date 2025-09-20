@@ -10,9 +10,13 @@ window.onload = function() {
 
 document.getElementById('button').addEventListener("click", addTask);
 document.getElementById('clearAll').addEventListener("click", () => {
-    tasksList = [];
-    saveAndRender();
+    const confirmation = confirm("Are you sure you want to delete all tasks ?");
+    if (confirmation) {
+        tasksList = [];
+        saveAndRender();
+    }
 });
+
 document.getElementById('search').addEventListener("input", () => {
     const searchTerm = document.getElementById('search').value;
     renderTasks(searchTerm);
