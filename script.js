@@ -10,10 +10,12 @@ window.onload = function() {
 
 document.getElementById('button').addEventListener("click", addTask);
 document.getElementById('clearAll').addEventListener("click", () => {
-    const confirmation = confirm("Are you sure you want to delete all tasks ?");
-    if (confirmation) {
-        tasksList = [];
-        saveAndRender();
+    if (tasksList.length != 0) {
+        const confirmation = confirm("Are you sure you want to delete all tasks ?");
+        if (confirmation) {
+            tasksList = [];
+            saveAndRender();
+        }
     }
 });
 
