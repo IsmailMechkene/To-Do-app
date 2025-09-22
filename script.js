@@ -71,7 +71,9 @@ function renderTasks(filter = "") {
                     <span style="text-decoration:${task.state ? 'line-through' : 'none'}">${task.text}</span>
                     <div class="buttons">
                         <button class="delete" onclick="deleteTask(${index})">Delete</button>
-                        <button class="done" onclick="doneTask(${index})">Mark as done</button>
+                        <button class="done" onclick="doneTask(${index})">
+                            ${task.state ? "Mark as undone" : "Mark as done"}
+                        </button>
                     </div>
                 </li>
             `;
